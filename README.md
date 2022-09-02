@@ -31,10 +31,13 @@ Teams is responsible for:
   - Loading the data into a database (relational or non-relational)
 
 We will also prepare a report to address the following points:
+  
   EXTRACT: 
   Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.)
+  
   TRANSFOR: 
   What data cleaning or transformation was required
+  
   LOAD: 
   The final database, tables/collections, and why this was chosen.
 
