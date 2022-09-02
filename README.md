@@ -35,7 +35,7 @@ We will also prepare a report to address the following points:
   EXTRACT: 
   Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.)
   
-  TRANSFOR: 
+  TRANSFER: 
   What data cleaning or transformation was required
   
   LOAD: 
