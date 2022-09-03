@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 -- Database: MoneyBall
 --------------------------------------------------------------------------------
-
+-- must be on Moneyball database to run these scripts to build tables
 
 -- Table: public.City
 --------------------------------------------------------------------------------
@@ -54,4 +54,44 @@ CREATE TABLE IF NOT EXISTS public."Team"
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Team"
+    OWNER to postgres;
+
+
+-- Table: public.Payroll
+--------------------------------------------------------------------------------
+-- DROP TABLE IF EXISTS public."Payroll";
+
+CREATE TABLE IF NOT EXISTS public."Payroll"
+(
+    payrollid integer NOT NULL,
+    teamid integer NOT NULL,
+    year integer NOT NULL,
+    amount double precision NOT NULL,
+    CONSTRAINT "Payroll_pkey" PRIMARY KEY (payrollid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Payroll"
+    OWNER to postgres;
+
+
+-- Table: public.Salary
+--------------------------------------------------------------------------------
+-- DROP TABLE IF EXISTS public."Salary";
+
+CREATE TABLE IF NOT EXISTS public."Salary"
+(
+    salaryid integer NOT NULL,
+    playerid integer,
+    teamid integer,
+    salary double precision,
+    last_salary double precision,
+    year integer,
+    CONSTRAINT "Salary_pkey" PRIMARY KEY (salaryid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Salary"
     OWNER to postgres;
