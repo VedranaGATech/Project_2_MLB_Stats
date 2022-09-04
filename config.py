@@ -1,1 +1,0 @@
-pg_pwd = "postgres:password@localhost"
