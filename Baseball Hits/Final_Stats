@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS Final_Batting;
+
+CREATE TABLE Final_Batting (
+    ID serial primary key,
+    PlayerID varchar,
+    TeamID varchar,
+    Years int,
+    Hits int,
+    Doubles int,
+    Triples int,
+    Home_Runs int,
+    RBI int
+    );
+ 
+SELECT * FROM Final_Batting;
