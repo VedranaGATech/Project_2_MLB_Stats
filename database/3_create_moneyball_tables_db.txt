@@ -63,10 +63,18 @@ ALTER TABLE IF EXISTS public."Team"
 
 CREATE TABLE IF NOT EXISTS public."Payroll"
 (
-    payrollid integer NOT NULL,
+    payrollid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
     teamid integer NOT NULL,
-    year integer NOT NULL,
-    amount double precision NOT NULL,
+    payroll double precision,
+    w integer,
+    l integer,
+    wpct double precision,
+    rnk integer,
+    lgrk integer,
+    mlbrk integer,
+    last_payroll double precision,
+    top_salary text COLLATE pg_catalog."default",
+    year integer,
     CONSTRAINT "Payroll_pkey" PRIMARY KEY (payrollid)
 )
 
