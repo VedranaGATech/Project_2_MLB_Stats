@@ -1,0 +1,74 @@
+Team
+--
+teamid
+teamname
+cityid FK >- City.cityid
+league
+division
+
+
+City
+--
+cityid
+cityname
+statename
+
+Player
+--
+playerid
+playerfirst
+playerlast
+teamid FK >- Team.teamid
+year
+
+Pitching
+--
+pitchingid
+playerid FK >- Player.playerid
+year
+
+Batting
+--
+battingid
+playerid FK >- Player.playerid
+hits
+hrs
+year
+
+Salary
+--
+salaryid
+salary
+teamid FK >- Team.teamid
+playerid FK >- Player.playerid
+last_salary
+war
+exp
+year
+
+
+
+Payroll
+--
+payrollid
+teamid FK >- Team.teamid
+league
+division
+payroll
+w	 
+l
+wpct
+rank
+lgrk
+mlbrk
+top_salary
+year
+
+Cards
+--
+cardid
+playerid FK >- Player.playerid
+year
+value
+
+

@@ -5,8 +5,6 @@
 
 -- Table: public.City
 --------------------------------------------------------------------------------
--- DROP TABLE IF EXISTS public."City";
-
 CREATE TABLE IF NOT EXISTS public."City"
 (
     cityid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
@@ -21,32 +19,14 @@ ALTER TABLE IF EXISTS public."City"
     OWNER to postgres;
 
 
--- Table: public.Player
---------------------------------------------------------------------------------
--- DROP TABLE IF EXISTS public."Player";
-
-CREATE TABLE IF NOT EXISTS public."Player"
-(
-    playerid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
-    teamid integer NOT NULL,
-    year integer,
-    CONSTRAINT "Player_pkey" PRIMARY KEY (playerid)
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public."Player"
-    OWNER to postgres;
-
-
 -- Table: public.Team
 --------------------------------------------------------------------------------
--- DROP TABLE IF EXISTS public."Team";
-
 CREATE TABLE IF NOT EXISTS public."Team"
 (
     teamid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
     teamname text COLLATE pg_catalog."default" NOT NULL,
+    league text COLLATE pg_catalog."default",
+    division text COLLATE pg_catalog."default",
     cityid integer NOT NULL,
     CONSTRAINT "Team_pkey" PRIMARY KEY (teamid)
 )
@@ -59,8 +39,6 @@ ALTER TABLE IF EXISTS public."Team"
 
 -- Table: public.Payroll
 --------------------------------------------------------------------------------
--- DROP TABLE IF EXISTS public."Payroll";
-
 CREATE TABLE IF NOT EXISTS public."Payroll"
 (
     payrollid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
@@ -86,15 +64,15 @@ ALTER TABLE IF EXISTS public."Payroll"
 
 -- Table: public.Salary
 --------------------------------------------------------------------------------
--- DROP TABLE IF EXISTS public."Salary";
-
 CREATE TABLE IF NOT EXISTS public."Salary"
 (
-    salaryid integer NOT NULL,
-    playerid integer,
-    teamid integer,
+    salaryid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
     salary double precision,
+    teamid integer,
+    playerid text COLLATE pg_catalog."default",
     last_salary double precision,
+    war double precision,
+    exp integer,
     year integer,
     CONSTRAINT "Salary_pkey" PRIMARY KEY (salaryid)
 )
@@ -102,4 +80,22 @@ CREATE TABLE IF NOT EXISTS public."Salary"
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Salary"
+    OWNER to postgres;
+
+
+-- Table: public.Player
+--------------------------------------------------------------------------------
+-- DROP TABLE IF EXISTS public."Player";
+
+CREATE TABLE IF NOT EXISTS public."Player"
+(
+    playerid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    teamid integer NOT NULL,
+    year integer,
+    CONSTRAINT "Player_pkey" PRIMARY KEY (playerid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Player"
     OWNER to postgres;

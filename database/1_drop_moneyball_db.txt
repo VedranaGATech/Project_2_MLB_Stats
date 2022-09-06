@@ -1,9 +1,0 @@
--- run select statement first to clear any open session
-SELECT pg_terminate_backend(pg_stat_activity.pid)
-FROM pg_stat_activity
-WHERE pg_stat_activity.datname = 'MoneyBall' -- ← change this to your DB
-  AND pid <> pg_backend_pid();
-
--- run drop second after session are cleared, you have to get off off Moneyball to run  
-DROP DATABASE IF EXISTS "MoneyBall";
-

@@ -1,0 +1,4 @@
+-- run from database other than MoneyBall, it can't drop itself
+ 
+DROP DATABASE IF EXISTS "MoneyBall";
+
