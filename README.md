@@ -47,6 +47,7 @@ We will also prepare a report to address the following points:
 http://www.Kaggle.com (“MLB Players Dataset, from 2005 to 2019”,” Baseball Databank”) 
 https://www.quickdatabasediagrams.com/  
 https://www.thebaseballcube.com/  
+https://www.worldatlas.com/articles/mlb-teams-and-their-cities.html
 
 ## Acknowledgments
 
