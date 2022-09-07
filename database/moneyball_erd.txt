@@ -15,17 +15,25 @@ statename
 
 Player
 --
-playerid
-playerfirst
-playerlast
-teamid FK >- Team.teamid
-year
+PlayerID
+Year
+Team
+Name
+team_id FK >- Team.teamid
 
 Pitching
 --
 pitchingid
 playerid FK >- Player.playerid
-year
+yearID
+stint
+teamID
+lgID
+SO
+BAOpp
+ERA
+team_id
+
 
 Batting
 --
@@ -34,6 +42,13 @@ playerid FK >- Player.playerid
 hits
 hrs
 year
+team
+Hits
+Doubles
+Triples
+Home_runs
+RBI
+team_id
 
 Salary
 --
@@ -64,11 +79,5 @@ mlbrk
 top_salary
 year
 
-Cards
---
-cardid
-playerid FK >- Player.playerid
-year
-value
 
 
