@@ -66,10 +66,16 @@ We will also prepare a report to address the following points:
 
 
   6. Batting.csv
+     - First took the Batting.csv and stored it as a SQL Database
+     - Then brought it over to Jupyter Notebook
+     - Queried only the data we needed
+     
+     ![2022-09-07 19_29_13-BattingStats - Jupyter Notebook and 4 more pages - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189000578-90cf0d09-04b6-4cce-a6df-bc0ba98376c8.png)
 
+     - Then Group each stat by year, team and playerID to get total sums of each stat
+![2022-09-07 19_31_21-BattingStats - Jupyter Notebook and 4 more pages - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189000970-6267079a-8a98-4e22-93a5-ff7e245f7a20.png)
 
-  Insert how it was transformed
-
+     - And saved it as a new CSV called Batting_Stats.csv
 
   8. Payrolls.csv
 
