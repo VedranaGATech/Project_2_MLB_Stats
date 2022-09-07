@@ -41,6 +41,7 @@ We will also prepare a report to address the following points:
   4. Batting.csv
   5. Payrolls.csv
   6. Salaries.csv
+  7. 0519_baseball_reference.csv
   
   
   **TRANSFORM:**
@@ -78,7 +79,7 @@ We will also prepare a report to address the following points:
 
   10. Salaries.csv
 
-  
+
   nsert how it was transformed
 
   
