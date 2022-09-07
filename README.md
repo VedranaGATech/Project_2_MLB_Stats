@@ -46,7 +46,7 @@ We will also prepare a report to address the following points:
   TRANSFORM:
   What data cleaning or transformation was required
   During the transformation process, we utilized jupyter notebook. 
-  1.Teams.csv
+  1. Teams.csv
   insert how it was transformed
   2. Cities.csv
   insert how it was transformed
@@ -63,6 +63,8 @@ We will also prepare a report to address the following points:
   LOAD: 
   The final database, tables/collections, and why this was chosen.
   The final database we used was postgreSQL
+
+  test
  
 
 
