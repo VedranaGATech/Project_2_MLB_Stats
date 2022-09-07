@@ -99,3 +99,24 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Player"
     OWNER to postgres;
+
+
+-- Table: Pitching
+--------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public."Pitching"
+(
+    pitchingid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    team_id integer,
+    playerID text COLLATE pg_catalog."default",
+    yearID integer,
+    stint integer,
+    lgID text COLLATE pg_catalog."default",
+    SO integer,
+    BAOpp double precision,
+    ERA double precision
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Pitching"
+    OWNER to postgres;
