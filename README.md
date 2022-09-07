@@ -47,16 +47,38 @@ We will also prepare a report to address the following points:
   What data cleaning or transformation was required
   During the transformation process, we utilized jupyter notebook. 
   1. Teams.csv
+
+
   insert how it was transformed
+
+
   2. Cities.csv
+
+
   insert how it was transformed
+
+
   4. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
+
+
   insert how it was transformed
+
+
   6. Batting.csv
-  Insert how it was transformed \n
+
+
+  Insert how it was transformed
+
+
   8. Payrolls.csv
+
+
   Insert how it was transformed "\n"
+
+
   10. Salaries.csv
+
+  
   nsert how it was transformed
 
   
