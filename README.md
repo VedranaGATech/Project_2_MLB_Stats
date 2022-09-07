@@ -34,7 +34,7 @@ Teams is responsible for:
 
 We will also prepare a report to address the following points:
   
-  EXTRACT: First the following 6/7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
+  **EXTRACT:** First the following 6/7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
   1. Teams.csv
   2. Cities.csv
   3. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
@@ -43,7 +43,7 @@ We will also prepare a report to address the following points:
   6. Salaries.csv
   
   
-  TRANSFORM:
+  **TRANSFORM:**
   What data cleaning or transformation was required
   During the transformation process, we utilized jupyter notebook. 
   1. Teams.csv
@@ -60,7 +60,7 @@ We will also prepare a report to address the following points:
   nsert how it was transformed
 
   
-  LOAD: 
+  **LOAD:** 
   The final database, tables/collections, and why this was chosen.
   The final database we used was postgreSQL
 
