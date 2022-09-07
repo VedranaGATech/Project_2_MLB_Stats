@@ -34,7 +34,7 @@ Teams is responsible for:
 
 We will also prepare a report to address the following points:
   
-  **EXTRACT:** First the following 6/7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
+  **EXTRACT:** First the following 7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
   1. Teams.csv
   2. Cities.csv
   3. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
