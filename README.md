@@ -53,9 +53,9 @@ We will also prepare a report to address the following points:
   4. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
   insert how it was transformed
   6. Batting.csv
-  Insert how it was transformed
+  Insert how it was transformed \n
   8. Payrolls.csv
-  Insert how it was transformed
+  Insert how it was transformed "\n"
   10. Salaries.csv
   nsert how it was transformed
 
