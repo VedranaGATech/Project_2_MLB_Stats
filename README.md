@@ -1,4 +1,4 @@
-# Project_2_MLB_Stats
+# Project_2_MLB_Stats_ETL
 
 ![image](images/Baseball_Stats_You_Need_To_Know.png)
 
@@ -14,16 +14,16 @@
     Basimamovic, Vedrana 
     Lampton, Jarvis 
     
-   This project will deliver a database about Major League Baseball. We included 
-
-Perform the ETL process and create your documentation. Documentation must include: 
+   This project will deliver a database about Major League Baseball dated from 2000-2015. We performed the ETL process and create documentation which includes includes: 
 
     ● Datasets used and their sources 
 
     ● Types of data wrangling performed (data cleaning, joining, filtering, aggregating) 
 
-    ● The schemata used in the final production database 
-
+    ● The schemata used in the final production database
+    
+   
+ ![image](images/moneyball_erd.png)
  
 We will use Python and Pandas for transformation, which can also be done with SQL or a specialized ETL tool. 
 Teams is responsible for:
@@ -34,19 +34,23 @@ Teams is responsible for:
 
 We will also prepare a report to address the following points:
   
-  **EXTRACT:** First the following 7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
+ ## **EXTRACT:** 
+ 
+ First the following 7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
   1. Teams.csv
   2. Cities.csv
-  3. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
+  3. Pitching.csv 
   4. Batting.csv
   5. Payrolls.csv
   6. Salaries.csv
   7. 0519_baseball_reference.csv
   
   
-  **TRANSFORM:**
+ ##  **TRANSFORM:**
+  
   What data cleaning or transformation was required
   During the transformation process, we utilized jupyter notebook. 
+  
   1. Teams.csv
 
 
@@ -60,9 +64,15 @@ We will also prepare a report to address the following points:
 
 
   4. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
+     - Original Pitching.csv was loaded and stored in SQL Database
+     - Then brought it over to Jupyter Notebook for filtering (year) and cleaning (removed unusable columns)
+     - Created relation to Teams file 
+     - Stored clean csv filed so only needed data can be queried 
+     
+![image](images/pitching.png)
 
+![image](images/pitching2.png)
 
-  insert how it was transformed
 
 
   6. Batting.csv
@@ -89,7 +99,8 @@ We will also prepare a report to address the following points:
   nsert how it was transformed
 
   
-  **LOAD:** 
+ ##  **LOAD:** 
+ 
   The final database, tables/collections, and why this was chosen.
 
   
