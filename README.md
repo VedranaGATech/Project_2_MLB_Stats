@@ -1,4 +1,4 @@
-# Project_2_MLB_Stats
+# Project_2_MLB_Stats_ETL
 
 ![image](images/Baseball_Stats_You_Need_To_Know.png)
 
@@ -13,15 +13,18 @@
     Ariwodo, Michael 
     Basimamovic, Vedrana 
     Lampton, Jarvis 
-
-Perform the ETL process and create your documentation. Documentation must include: 
+    
+    
+   This project will deliver a database about Major League Baseball dated from 2000-2015. We performed the ETL process and create documentation which includes includes: 
 
     ● Datasets used and their sources 
 
     ● Types of data wrangling performed (data cleaning, joining, filtering, aggregating) 
 
-    ● The schemata used in the final production database 
-
+    ● The schemata used in the final production database
+    
+   
+ ![image](images/moneyball_erd.png)
  
 We will use Python and Pandas for transformation, which can also be done with SQL or a specialized ETL tool. 
 Teams is responsible for:
@@ -32,14 +35,82 @@ Teams is responsible for:
 
 We will also prepare a report to address the following points:
   
-  EXTRACT: 
-  Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.)
+ # **EXTRACT:** 
+ 
+ First the following 7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
+
+      1. Teams and Cities
+       - Needed a list of the current Major League Baseball teams and their cities.  
+       - The data resided in the html of a page on Worldatlas.com.
+       - We utilized BeautifulSoup in Jupyter Notebook to isolate and extract the team and city information from the html.  
+      3. Pitching.csv 
+      4. Batting.csv
+      5. Payrolls.csv
+      6. Salaries.csv
+      7. 0519_baseball_reference.csv
   
-  TRANSFER: 
+  
+ #  **TRANSFORM:**
+  
   What data cleaning or transformation was required
+  During the transformation process, we utilized jupyter notebook. 
   
-  LOAD: 
+  ## 1. Teams and Cities
+     - Looped through the resulting rows of the html extract and built ORM Team and City objects
+     - Committed ORM objects to City and Team Postgresql tables.  
+     - Subsequently, a query from each of the tables was saved as Teams.csv and Cities.csv to facilitate easier testing
+     - Built a data dictionary of team names and abbreviations so other data sets could lookup the team ids
+![image](images/team_transfer_load.JPG)
+
+ ## 3. Pitching.csv 
+     - Original Pitching.csv was loaded and stored in SQL Database
+     - Then brought over to Jupyter Notebook for filtering (year) and cleaning (removed unusable columns)
+     - Created relation to Teams file for team_id identification 
+     - Stored clean csv file in database so only needed data can be queried 
+     
+![image](images/pitching.png)
+
+![image](images/pitching2.png)
+
+
+
+ ## 4. Batting.csv
+     - First took the Batting.csv and stored it as a SQL Database
+     - Then brought it over to Jupyter Notebook
+     - Queried only the data we needed
+     
+     ![2022-09-07 19_29_13-BattingStats - Jupyter Notebook and 4 more pages - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189000578-90cf0d09-04b6-4cce-a6df-bc0ba98376c8.png)
+
+     - Then Group each stat by year, team and playerID to get total sums of each stat
+![2022-09-07 19_31_21-BattingStats - Jupyter Notebook and 4 more pages - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189000970-6267079a-8a98-4e22-93a5-ff7e245f7a20.png)
+
+     - And saved it as a new CSV called Batting_Stats.csv
+
+ ## 5. Payrolls.csv
+
+
+  Insert how it was transformed "\n"
+
+
+  ## 6. Salaries.csv
+
+-First took the 0519_baseball_reference.csv and loaded that into jupyter notebook.
+-Took the salaries.csv and stored it in the SQL database.
+-Joined the csvs together based on teamid to get the team from the matching dictionary used earlier and identified missing salaries using SQLAlchemy
+-Reloaded from SQL and saved it to the salaries csv
+  
+ ![image](images/salaries.png)
+
+  
+ #  **LOAD:** 
+ 
   The final database, tables/collections, and why this was chosen.
+
+  
+  The final database we used was postgreSQL
+
+  test
+ 
 
 
 ## Sources:  
@@ -47,6 +118,7 @@ We will also prepare a report to address the following points:
 http://www.Kaggle.com (“MLB Players Dataset, from 2005 to 2019”,” Baseball Databank”) 
 https://www.quickdatabasediagrams.com/  
 https://www.thebaseballcube.com/  
+https://www.worldatlas.com/articles/mlb-teams-and-their-cities.html
 
 ## Acknowledgments
 
