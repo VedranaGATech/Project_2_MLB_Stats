@@ -14,6 +14,7 @@
     Basimamovic, Vedrana 
     Lampton, Jarvis 
     
+    
    This project will deliver a database about Major League Baseball dated from 2000-2015. We performed the ETL process and create documentation which includes includes: 
 
     ● Datasets used and their sources 
@@ -34,36 +35,37 @@ Teams is responsible for:
 
 We will also prepare a report to address the following points:
   
- ## **EXTRACT:** 
+ # **EXTRACT:** 
  
  First the following 7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
-  1. Teams.csv
-  2. Cities.csv
-  3. Pitching.csv 
-  4. Batting.csv
-  5. Payrolls.csv
-  6. Salaries.csv
-  7. 0519_baseball_reference.csv
+
+      1. Teams.csv
+      2. Cities.csv
+      3. Pitching.csv 
+      4. Batting.csv
+      5. Payrolls.csv
+      6. Salaries.csv
+      7. 0519_baseball_reference.csv
   
   
- ##  **TRANSFORM:**
+ #  **TRANSFORM:**
   
   What data cleaning or transformation was required
   During the transformation process, we utilized jupyter notebook. 
   
-  1. Teams.csv
+  ## 1. Teams.csv
 
 
   insert how it was transformed
 
 
-  2. Cities.csv
+ ## 2. Cities.csv
 
 
   insert how it was transformed
 
 
-  4. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
+ ## 3. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
      - Original Pitching.csv was loaded and stored in SQL Database
      - Then brought it over to Jupyter Notebook for filtering (year) and cleaning (removed unusable columns)
      - Created relation to Teams file 
@@ -75,7 +77,7 @@ We will also prepare a report to address the following points:
 
 
 
-  6. Batting.csv
+ ## 4. Batting.csv
      - First took the Batting.csv and stored it as a SQL Database
      - Then brought it over to Jupyter Notebook
      - Queried only the data we needed
@@ -87,19 +89,19 @@ We will also prepare a report to address the following points:
 
      - And saved it as a new CSV called Batting_Stats.csv
 
-  8. Payrolls.csv
+ ## 5. Payrolls.csv
 
 
   Insert how it was transformed "\n"
 
 
-  10. Salaries.csv
+  ## 6. Salaries.csv
 
 
   nsert how it was transformed
 
   
- ##  **LOAD:** 
+ #  **LOAD:** 
  
   The final database, tables/collections, and why this was chosen.
 
