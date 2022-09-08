@@ -16,9 +16,9 @@
     
     
    The program will deliver a database with data about Major League Baseball (MLB) from 2000 to 2015. By extracting, transforming and loading our databases for cities, teams, salary, payroll, players, pitching stats, and batting stats to our database, a link can be made between numerous aspects of Major League Baseball (MLB).
+   Those analyzing the data may choose to analyze the connection (s) between salary and batting stats, payroll vs team, payroll and city, or pitching and batting stats per team or city.
     
-    Those analyzing the data may choose to analyze the connection (s) between salary and batting stats, payroll vs team, payroll and city, or pitching and batting stats per team or city.
-    
+     
     We performed the ETL process and create documentation which includes includes: 
 
     ● Datasets used and their sources 
