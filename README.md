@@ -39,8 +39,10 @@ We will also prepare a report to address the following points:
  
  First the following 7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
 
-      1. Teams.csv
-      2. Cities.csv
+      1. Teams and Cities
+           Worldatlas.com (https://www.worldatlas.com/articles/mlb-teams-and-their-cities.html) was our source for a list of the current 
+           Major League Baseball teams and their cities.  The data resided in the html of a page on the website.  We utilized 
+           BeautifulSoup in Jupyter Notebook to isolate and extract the team and city information from the html.           
       3. Pitching.csv 
       4. Batting.csv
       5. Payrolls.csv
@@ -53,17 +55,10 @@ We will also prepare a report to address the following points:
   What data cleaning or transformation was required
   During the transformation process, we utilized jupyter notebook. 
   
-  ## 1. Teams.csv
-
-
-  insert how it was transformed
-
-
- ## 2. Cities.csv
-
-
-  insert how it was transformed
-
+  ## 1. Teams and Cities
+        We itterated through the resulting rows of the html extract and built orm Team and City objects that we committed to Postgresql tables.
+        Subsequently, a query from each of the tables was saved as Teams.csv and Cities.csv to facilitate easier testing and prevent duplicate 
+        additions to the database.
 
  ## 3. Pitching.csv 
      - Original Pitching.csv was loaded and stored in SQL Database
