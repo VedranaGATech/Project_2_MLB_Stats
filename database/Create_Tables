@@ -1,0 +1,122 @@
+--------------------------------------------------------------------------------
+-- Database: MoneyBall
+--------------------------------------------------------------------------------
+-- must be on Moneyball database to run these scripts to build tables
+
+-- Table: public.City
+--------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public."City"
+(
+    cityid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    cityname text COLLATE pg_catalog."default" NOT NULL,
+    statename text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "City_pkey" PRIMARY KEY (cityid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."City"
+    OWNER to postgres;
+
+
+-- Table: public.Team
+--------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public."Team"
+(
+    teamid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    teamname text COLLATE pg_catalog."default" NOT NULL,
+    league text COLLATE pg_catalog."default",
+    division text COLLATE pg_catalog."default",
+    cityid integer NOT NULL,
+    CONSTRAINT "Team_pkey" PRIMARY KEY (teamid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Team"
+    OWNER to postgres;
+
+
+-- Table: public.Payroll
+--------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public."Payroll"
+(
+    payrollid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    teamid integer NOT NULL,
+    payroll double precision,
+    w integer,
+    l integer,
+    wpct double precision,
+    rnk integer,
+    lgrk integer,
+    mlbrk integer,
+    last_payroll double precision,
+    top_salary text COLLATE pg_catalog."default",
+    year integer,
+    CONSTRAINT "Payroll_pkey" PRIMARY KEY (payrollid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Payroll"
+    OWNER to postgres;
+
+
+-- Table: public.Salary
+--------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public."Salary"
+(
+    salaryid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    salary double precision,
+    teamid integer,
+    playerid text COLLATE pg_catalog."default",
+    last_salary double precision,
+    war double precision,
+    exp integer,
+    year integer,
+    CONSTRAINT "Salary_pkey" PRIMARY KEY (salaryid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Salary"
+    OWNER to postgres;
+
+
+-- Table: public.Player
+--------------------------------------------------------------------------------
+-- DROP TABLE IF EXISTS public."Player";
+
+CREATE TABLE IF NOT EXISTS public."Player"
+(
+    playerid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    teamid integer NOT NULL,
+    year integer,
+    CONSTRAINT "Player_pkey" PRIMARY KEY (playerid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Player"
+    OWNER to postgres;
+
+
+-- Table: Pitching
+--------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public."Pitching"
+(
+    pitchingid integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    team_id integer,
+    playerID text COLLATE pg_catalog."default",
+    yearID integer,
+    stint integer,
+    lgID text COLLATE pg_catalog."default",
+    SO integer,
+    BAOpp double precision,
+    ERA double precision
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Pitching"
+    OWNER to postgres;
