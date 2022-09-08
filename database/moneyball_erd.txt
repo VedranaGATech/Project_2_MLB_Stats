@@ -1,83 +1,72 @@
-Team
---
-teamid
-teamname
-cityid FK >- City.cityid
-league
-division
-
-
-City
---
-cityid
-cityname
-statename
-
-Player
---
-PlayerID
-Year
-Team
-Name
-team_id FK >- Team.teamid
-
-Pitching
---
-pitchingid
-playerid FK >- Player.playerid
-yearID
-stint
-teamID
-lgID
-SO
-BAOpp
-ERA
-team_id
-
 
 Batting
 --
-battingid
-playerid FK >- Player.playerid
-hits
-hrs
-year
-team
-Hits
-Doubles
-Triples
-Home_runs
-RBI
-team_id
+playerid text PK FK >- Player.playerid
+year bigint 
+team text 
+Hits bigint
+Triples bigint
+Home_Rins bigint
+RBI bigint
+team_id bigint FK >- Player.team_id
+
+Pitching
+--
+playerID text PK FK >- Player.playerid
+yearID intege
+stint integer
+lgID text 
+SO integer
+BAOpp double
+ERA double
+team_id integer FK >- Player.team_id
+
+Player
+--
+Playerid integer PK
+Team text
+Year bigint
+Name text
+team_id integer FK >- Team.teamid
+
 
 Salary
 --
-salaryid
-salary
-teamid FK >- Team.teamid
-playerid FK >- Player.playerid
-last_salary
-war
-exp
-year
-
-
+salaryid integer PK
+salary double 
+teamid integer
+playerid text FK >- Player.playerid
+last_salary double 
+war double 
+exp integer
+year integer
 
 Payroll
 --
-payrollid
-teamid FK >- Team.teamid
-league
-division
-payroll
-w	 
-l
-wpct
-rank
-lgrk
-mlbrk
-top_salary
-year
+payrollid integer PK
+teamid integer FK >- Salary.teamid
+payroll double 
+w integer
+l integer
+wpct double 
+rnk integer
+lgrk integer
+mlbrk integer
+last_payroll double 
+top_salary text 
+year integer
 
+Team
+--
+teamid integer PK FK >- Payroll.teamid
+teamname text 
+league text 
+division text 
+cityid integer FK >- City.cityid
 
+City
+--
+cityid integer PK
+cityname text 
+statename text 
 
