@@ -65,11 +65,11 @@ We will also prepare a report to address the following points:
   insert how it was transformed
 
 
- ## 3. Pitching.csv (OR IS THIS ONE PITCHING FINAL?)
+ ## 3. Pitching.csv 
      - Original Pitching.csv was loaded and stored in SQL Database
-     - Then brought it over to Jupyter Notebook for filtering (year) and cleaning (removed unusable columns)
-     - Created relation to Teams file 
-     - Stored clean csv filed so only needed data can be queried 
+     - Then brought over to Jupyter Notebook for filtering (year) and cleaning (removed unusable columns)
+     - Created relation to Teams file for team_id identification 
+     - Stored clean csv file in database so only needed data can be queried 
      
 ![image](images/pitching.png)
 
