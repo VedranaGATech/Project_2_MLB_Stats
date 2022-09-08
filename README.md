@@ -56,10 +56,10 @@ We will also prepare a report to address the following points:
   During the transformation process, we utilized jupyter notebook. 
   
   ## 1. Teams and Cities
-        We itterated through the resulting rows of the html extract and built orm Team and City objects that we committed to
-        Postgresql tables.  Subsequently, a query from each of the tables was saved as Teams.csv and Cities.csv to facilitate
-        easier testing and prevent duplicate additions to the database.  We built a data dictionary of team names and 
-        abbreviations so other data sets could lookup the team ids and insert records related to the proper team. 
+     - Looped through the resulting rows of the html extract and built orm Team and City objects
+     - Committed ORM objects to Postgresql tables.  
+     - Subsequently, a query from each of the tables was saved as Teams.csv and Cities.csv to facilitate easier testing
+     - Built a data dictionary of team names and abbreviations so other data sets could lookup the team ids
 
  ## 3. Pitching.csv 
      - Original Pitching.csv was loaded and stored in SQL Database
