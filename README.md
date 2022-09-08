@@ -53,7 +53,7 @@ We will also prepare a report to address the following points:
  #  **TRANSFORM:**
   
   What data cleaning or transformation was required
-  During the transformation process, we utilized jupyter notebook. 
+  during the transformation process, we utilized jupyter notebook. 
   
   ## 1. Teams and Cities
      - Looped through the resulting rows of the html extract and built ORM Team and City objects
