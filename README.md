@@ -40,9 +40,9 @@ We will also prepare a report to address the following points:
  First the following 7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
 
       1. Teams and Cities
-           Worldatlas.com (https://www.worldatlas.com/articles/mlb-teams-and-their-cities.html) was our source for a list of 
-           the current Major League Baseball teams and their cities.  The data resided in the html of a page on the website.
-           We utilized BeautifulSoup in Jupyter Notebook to isolate and extract the team and city information from the html.           
+       - Worldatlas.com was our source for a list of the current Major League Baseball teams and their cities.  
+       - The data resided in the html of a page on the website.
+       - We utilized BeautifulSoup in Jupyter Notebook to isolate and extract the team and city information from the html.           
       3. Pitching.csv 
       4. Batting.csv
       5. Payrolls.csv
@@ -56,7 +56,7 @@ We will also prepare a report to address the following points:
   During the transformation process, we utilized jupyter notebook. 
   
   ## 1. Teams and Cities
-     - Looped through the resulting rows of the html extract and built orm Team and City objects
+     - Looped through the resulting rows of the html extract and built ORM Team and City objects
      - Committed ORM objects to Postgresql tables.  
      - Subsequently, a query from each of the tables was saved as Teams.csv and Cities.csv to facilitate easier testing
      - Built a data dictionary of team names and abbreviations so other data sets could lookup the team ids
