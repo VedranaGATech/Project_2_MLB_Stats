@@ -109,12 +109,18 @@ We will also prepare a report to address the following points:
  ## 5. Payrolls.csv
 
 
-  Insert how it was transformed "\n"
+     - Data was scrubbed from The Baseball Cube website and loaded into csv files
+
+     - Data sets were combined and cleaned up in Jupyter Notebook and table was updated with league and division
+     
+     - Clean dataset was reloaded from the Database and saved to finl csv file. 
+
+![image](images/payroll.png)
 
 
   ## 6. Salaries.csv
 
-    -First took the 0519_baseball_reference.csv and loaded that     into jupyter notebook.
+    -First took the 0519_baseball_reference.csv and loaded that into jupyter notebook.
 
     -Took the salaries.csv and stored it in the SQL database.
 
@@ -140,10 +146,10 @@ The final database is named MoneyBall.  It is a relational database that we buil
 
 ## Sources:  
 
-http://www.Kaggle.com (“MLB Players Dataset, from 2005 to 2019”,” Baseball Databank”) 
-https://www.quickdatabasediagrams.com/  
-https://www.thebaseballcube.com/  
-https://www.worldatlas.com/articles/mlb-teams-and-their-cities.html
+     http://www.Kaggle.com (“MLB Players Dataset, from 2005 to 2019”,” Baseball Databank”) 
+     https://www.quickdatabasediagrams.com/  
+     https://www.thebaseballcube.com/  
+     https://www.worldatlas.com/articles/mlb-teams-and-their-cities.html
 
 ## Acknowledgments
 
