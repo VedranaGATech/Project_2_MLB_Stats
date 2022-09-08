@@ -40,8 +40,8 @@ We will also prepare a report to address the following points:
  First the following 7 data sources are loaded. (Your original data sources and how the data were formatted (CSV, JSON, pgAdmin4, etc.))
 
       1. Teams and Cities
-       - Worldatlas.com was our source for a list of the current Major League Baseball teams and their cities.  
-       - The data resided in the html of a page on the website.
+       - Needed a list of the current Major League Baseball teams and their cities.  
+       - The data resided in the html of a page on Worldatlas.com.
        - We utilized BeautifulSoup in Jupyter Notebook to isolate and extract the team and city information from the html.           
       3. Pitching.csv 
       4. Batting.csv
