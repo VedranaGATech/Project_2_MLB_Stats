@@ -3,4 +3,4 @@ config.py
 configAB.py
 *.pyc
 .ipynb_checkpoints
-working_files
+working_files/
