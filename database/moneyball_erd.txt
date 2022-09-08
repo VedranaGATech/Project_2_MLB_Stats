@@ -1,20 +1,7 @@
-Team
---
-teamid
-teamname
-cityid FK >- City.cityid
-league
-division
 
-
-City
+Batting
 --
-cityid
-cityname
-statename
-
-Player
---
+<<<<<<< Updated upstream
 PlayerID
 Year
 Team
@@ -34,9 +21,31 @@ BAOpp
 ERA
 team_id
 
+=======
+playerid text PK FK >- Player.playerid
+year bigint 
+team text 
+Hits bigint
+Triples bigint
+Home_Rins bigint
+RBI bigint
+team_id bigint FK >- Player.team_id
 
-Batting
+Pitching
 --
+playerID text PK FK >- Player.playerid
+yearID intege
+stint integer
+lgID text 
+SO integer
+BAOpp double
+ERA double
+team_id integer FK >- Player.team_id
+>>>>>>> Stashed changes
+
+Player
+--
+<<<<<<< Updated upstream
 battingid
 playerid FK >- Player.playerid
 hits
@@ -49,35 +58,55 @@ Triples
 Home_runs
 RBI
 team_id
+=======
+Playerid integer PK
+Team text
+Year bigint
+Name text
+team_id integer FK >- Team.teamid
+
+>>>>>>> Stashed changes
 
 Salary
 --
-salaryid
-salary
-teamid FK >- Team.teamid
-playerid FK >- Player.playerid
-last_salary
-war
-exp
-year
-
-
+salaryid integer PK
+salary double 
+teamid integer
+playerid text FK >- Player.playerid
+last_salary double 
+war double 
+exp integer
+year integer
 
 Payroll
 --
-payrollid
-teamid FK >- Team.teamid
-league
-division
-payroll
-w	 
-l
-wpct
-rank
-lgrk
-mlbrk
-top_salary
-year
+payrollid integer PK
+teamid integer FK >- Salary.teamid
+payroll double 
+w integer
+l integer
+wpct double 
+rnk integer
+lgrk integer
+mlbrk integer
+last_payroll double 
+top_salary text 
+year integer
 
+<<<<<<< Updated upstream
+=======
+Team
+--
+teamid integer PK FK >- Payroll.teamid
+teamname text 
+league text 
+division text 
+cityid integer FK >- City.cityid
+>>>>>>> Stashed changes
 
+City
+--
+cityid integer PK
+cityname text 
+statename text 
 
