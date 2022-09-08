@@ -127,7 +127,8 @@ We will also prepare a report to address the following points:
   The final database, tables/collections, and why this was chosen.
 
   
-  The final database we used was postgreSQL
+  The final database is named MoneyBall.  It is a relational database that we built and hosted in PostgreSQL.  We chose a relational database because we wanted to organize the data from the datasets and identify relationships between key data points.
+  The goal was to create a final database that could be used to query Baseball information about Teams, Playes, Batting, Pitching and Payroll.
 
   test
  
