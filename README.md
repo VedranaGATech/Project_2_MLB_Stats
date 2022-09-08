@@ -72,7 +72,8 @@ We will also prepare a report to address the following points:
 
      - Then Replaced the team_id with the proper team_id
      
-     ![2022-09-08 18_34_54-Baseball_ETL - Jupyter Notebook and 1 more page - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189238787-d31c67e8-0803-4542-8609-1a0bdb2f1c73.png)
+
+![2022-09-08 18_34_54-Baseball_ETL - Jupyter Notebook and 1 more page - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189238909-34272879-527a-4f2b-8c10-a60ae2f530ea.png)
 
 
 
