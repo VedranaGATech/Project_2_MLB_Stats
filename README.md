@@ -53,7 +53,7 @@ We will also prepare a report to address the following points:
  #  **TRANSFORM:**
   
   What data cleaning or transformation was required
-  during the transformation process, we utilized jupyter notebook. 
+  During the transformation process, we utilized jupyter notebook. 
   
   ## 1. Teams and Cities
      - Looped through the resulting rows of the html extract and built ORM Team and City objects
@@ -61,6 +61,22 @@ We will also prepare a report to address the following points:
      - Subsequently, a query from each of the tables was saved as Teams.csv and Cities.csv to facilitate easier testing
      - Built a data dictionary of team names and abbreviations so other data sets could lookup the team ids
 ![image](images/team_transfer_load.JPG)
+
+## 2. Players
+     
+     - Took the pitching_final.csv, Batting_Stats.csv, and the salaries.csv and merged on playerID
+     - Created a new database with only the information needed
+     
+![2022-09-08 18_42_35-Baseball_ETL - Jupyter Notebook and 1 more page - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189238598-0e8e0665-4768-4b9c-b11c-abd524215149.png)
+
+
+     - Then Replaced the team_id with the proper team_id
+     
+     ![2022-09-08 18_34_54-Baseball_ETL - Jupyter Notebook and 1 more page - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189238787-d31c67e8-0803-4542-8609-1a0bdb2f1c73.png)
+
+
+
+
 
  ## 3. Pitching.csv 
      - Original Pitching.csv was loaded and stored in SQL Database
@@ -112,7 +128,7 @@ We will also prepare a report to address the following points:
   
   The final database we used was postgreSQL
 
- 
+  test
  
 
 
