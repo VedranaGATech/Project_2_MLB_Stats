@@ -15,7 +15,11 @@
     Lampton, Jarvis 
     
     
-   This project will deliver a database about Major League Baseball dated from 2000-2015. We performed the ETL process and create documentation which includes includes: 
+   The program will deliver a database with data about Major League Baseball (MLB) from 2000 to 2015. By extracting, transforming and loading our databases for cities, teams, salary, payroll, players, pitching stats, and batting stats to our database, a link can be made between numerous aspects of Major League Baseball (MLB).
+    
+    Those analyzing the data may choose to analyze the connection (s) between salary and batting stats, payroll vs team, payroll and city, or pitching and batting stats per team or city.
+    
+    We performed the ETL process and create documentation which includes includes: 
 
     ● Datasets used and their sources 
 
@@ -52,8 +56,7 @@ We will also prepare a report to address the following points:
   
  #  **TRANSFORM:**
   
-  What data cleaning or transformation was required
-  During the transformation process, we utilized jupyter notebook. 
+  What data cleaning or transformation was required during the transformation process, we utilized jupyter notebook. 
   
   ## 1. Teams and Cities
      - Looped through the resulting rows of the html extract and built ORM Team and City objects
@@ -96,7 +99,7 @@ We will also prepare a report to address the following points:
      - Then brought it over to Jupyter Notebook
      - Queried only the data we needed
      
-     ![2022-09-07 19_29_13-BattingStats - Jupyter Notebook and 4 more pages - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189000578-90cf0d09-04b6-4cce-a6df-bc0ba98376c8.png)
+![2022-09-07 19_29_13-BattingStats - Jupyter Notebook and 4 more pages - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189000578-90cf0d09-04b6-4cce-a6df-bc0ba98376c8.png)
 
      - Then Group each stat by year, team and playerID to get total sums of each stat
 ![2022-09-07 19_31_21-BattingStats - Jupyter Notebook and 4 more pages - Personal - Microsoft​ Edge](https://user-images.githubusercontent.com/100164773/189000970-6267079a-8a98-4e22-93a5-ff7e245f7a20.png)
@@ -127,10 +130,11 @@ We will also prepare a report to address the following points:
   The final database, tables/collections, and why this was chosen.
 
   
-  The final database is named MoneyBall.  It is a relational database that we built and hosted in PostgreSQL.  We chose a relational database because we wanted to organize the data from the datasets and identify relationships between key data points.
-  The goal was to create a final database that could be used to query Baseball information about Teams, Playes, Batting, Pitching and Payroll.
+The final database is named MoneyBall.  It is a relational database that we built and hosted in PostgreSQL.  We chose a relational database because we wanted to organize the data from the datasets and identify relationships between key data points.The goal was to create a final database that could be used to query Baseball information about Teams, Players, Batting, Pitching, and Payroll.
 
-  test
+  ![image](images/sql.png)
+  
+  ![image](images/sql2.png)
  
 
 
@@ -151,6 +155,6 @@ Person identification and demographics data are provided by
 Chadwick Baseball Bureau (http://www.chadwick-bureau.com),
 from its Register of baseball personnel.
 
-Player performance data for 1871 through 2014 is based on the
+Player performance data for 1871 through 2015 is based on the
 Lahman Baseball Database, version 2015-01-24, which is
 Copyright (C) 1996-2015 by Sean Lahman.
