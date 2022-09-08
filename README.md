@@ -94,10 +94,13 @@ We will also prepare a report to address the following points:
 
   ## 6. Salaries.csv
 
--First took the 0519_baseball_reference.csv and loaded that into jupyter notebook.
--Took the salaries.csv and stored it in the SQL database.
--Joined the csvs together based on teamid to get the team from the matching dictionary used earlier and identified missing salaries using SQLAlchemy
--Reloaded from SQL and saved it to the salaries csv
+    -First took the 0519_baseball_reference.csv and loaded that     into jupyter notebook.
+
+    -Took the salaries.csv and stored it in the SQL database.
+
+    -Joined the csvs together based on teamid to get the team from the matching dictionary used earlier and identified missing salaries using SQLAlchemy
+
+    -Reloaded from SQL and saved it to the salaries csv
   
  ![image](images/salaries.png)
 
