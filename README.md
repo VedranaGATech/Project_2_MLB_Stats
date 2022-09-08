@@ -60,8 +60,7 @@ We will also prepare a report to address the following points:
      - Committed ORM objects to City and Team Postgresql tables.  
      - Subsequently, a query from each of the tables was saved as Teams.csv and Cities.csv to facilitate easier testing
      - Built a data dictionary of team names and abbreviations so other data sets could lookup the team ids
-![image](images/team_extract.jpg)
-![image](images/team_transfer_load.jpg)
+![image](images/team_transfer_load.JPG)
 
  ## 3. Pitching.csv 
      - Original Pitching.csv was loaded and stored in SQL Database
