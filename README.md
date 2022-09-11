@@ -19,7 +19,7 @@
    Those analyzing the data may choose to analyze the connection (s) between salary and batting stats, payroll vs team, payroll and city, or pitching and batting stats per team or city.
     
      
-    We performed the ETL process and create documentation which includes includes: 
+    We performed the ETL process and create documentation which includes: 
 
     ● Datasets used and their sources 
 
@@ -136,7 +136,7 @@ We will also prepare a report to address the following points:
   The final database, tables/collections, and why this was chosen.
 
   
-The final database is named MoneyBall.  It is a relational database that we built and hosted in PostgreSQL.  We chose a relational database because we wanted to organize the data from the datasets and identify relationships between key data points.The goal was to create a final database that could be used to query Baseball information about Teams, Players, Batting, Pitching, and Payroll.
+The final database is named MoneyBall.  It is a relational database that we built and hosted in PostgreSQL.  We chose a relational database because we wanted to organize the data from the datasets and identify relationships between key data points.The goal was to create a final database that could be used to query Baseball information about Teams, Players, Batting, Pitching, Salary and Payroll.
 
   ![image](images/sql.png)
   
