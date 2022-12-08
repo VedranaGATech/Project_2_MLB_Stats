@@ -1,9 +1,9 @@
-# Project_2_MLB_Stats_ETL
+# MLB_Stats_ETL
 
 ![image](images/Baseball_Stats_You_Need_To_Know.png)
 
 
-## Group 2:  
+## Project Members:  
 
     Mcmullan, John
     Ortiz, Elena
@@ -14,7 +14,7 @@
     Basimamovic, Vedrana 
     Lampton, Jarvis 
     
-    
+  ## Project Overview
    The program will deliver a database with data about Major League Baseball (MLB) from 2000 to 2015. By extracting, transforming and loading our databases for cities, teams, salary, payroll, players, pitching stats, and batting stats to our database, a link can be made between numerous aspects of Major League Baseball (MLB).
    Those analyzing the data may choose to analyze the connection (s) between salary and batting stats, payroll vs team, payroll and city, or pitching and batting stats per team or city.
     
